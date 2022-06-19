@@ -24,7 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define C_GUI LGUI_T(KC_C)
 
 #define SLSH_CTL RCTL_T(KC_SLSH)
-#define DOT_ALT RALT_T(KC_RALT)
+#define DOT_ALT RALT_T(KC_DOT)
 #define COMM_GUI RGUI_T(KC_COMM)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
