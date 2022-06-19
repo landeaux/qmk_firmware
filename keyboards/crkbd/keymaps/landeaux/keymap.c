@@ -19,13 +19,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 
-#define Z_CTL LCTL_T(KC_Z)
-#define X_ALT LALT_T(KC_X)
-#define C_GUI LGUI_T(KC_C)
+#define A_CTL LCTL_T(KC_A)
+#define S_ALT LALT_T(KC_S)
+#define D_GUI LGUI_T(KC_D)
 
-#define SLSH_CTL RCTL_T(KC_SLSH)
-#define DOT_ALT RALT_T(KC_DOT)
-#define COMM_GUI RGUI_T(KC_COMM)
+#define SCLN_CTL RCTL_T(KC_SCLN)
+#define L_ALT RALT_T(KC_L)
+#define K_GUI RGUI_T(KC_K)
 
 #define SFT_ENT RSFT_T(KC_ENT)
 
@@ -34,20 +34,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
        KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-       KC_ESC,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
+       KC_ESC,   A_CTL,   S_ALT,   D_GUI,    KC_F,    KC_G,                         KC_H,    KC_J,   K_GUI,   L_ALT,SCLN_CTL, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT,   Z_CTL,   X_ALT,   C_GUI,    KC_V,    KC_B,                         KC_N,  KC_M, COMM_GUI, DOT_ALT, SLSH_CTL, SFT_ENT,
+      KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, SFT_ENT,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI,   MO(1),  KC_SPC,     KC_SPC,   MO(2), KC_RALT
                                       //`--------------------------'  `--------------------------'
-
   ),
 
   [1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       KC_TILD, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_ESC, _______, _______, _______, _______, _______,                       _______, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE,
+      KC_ESC,  _______, _______, _______, _______, _______,                      _______, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT, _______, _______, _______, _______, _______,                      _______, KC_MINS,  KC_EQL, KC_LBRC, KC_RBRC, SFT_ENT,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
