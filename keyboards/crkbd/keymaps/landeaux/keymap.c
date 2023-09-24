@@ -22,19 +22,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define A_CTL LCTL_T(KC_A)
 #define S_ALT LALT_T(KC_S)
 #define D_GUI LGUI_T(KC_D)
+#define F_SFT LSFT_T(KC_F)
 
 #define SCLN_CTL RCTL_T(KC_SCLN)
 #define L_ALT RALT_T(KC_L)
 #define K_GUI RGUI_T(KC_K)
-
-#define SFT_ENT RSFT_T(KC_ENT)
+#define J_SFT RSFT_T(KC_J)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
        KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-       KC_ESC,   A_CTL,   S_ALT,   D_GUI,    KC_F,    KC_G,                         KC_H,    KC_J,   K_GUI,   L_ALT,SCLN_CTL, KC_QUOT,
+       KC_ESC,   A_CTL,   S_ALT,   D_GUI,   F_SFT,    KC_G,                         KC_H,   J_SFT,   K_GUI,   L_ALT,SCLN_CTL, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RSFT,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
