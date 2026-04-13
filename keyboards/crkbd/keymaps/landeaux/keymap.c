@@ -39,7 +39,8 @@ const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
 
 bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t *tap_hold_record,
                      uint16_t other_keycode, keyrecord_t *other_record) {
-    if (TIMER_DIFF_16(other_record->event.time,
+    if (chordal_hold_handedness(other_record->event.key) != '*' &&
+        TIMER_DIFF_16(other_record->event.time,
                       tap_hold_record->event.time) < 70) {
         return false;
     }
