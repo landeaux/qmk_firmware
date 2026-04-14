@@ -47,6 +47,19 @@ bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t *tap_hold_record,
     return get_chordal_hold_default(tap_hold_record, other_record);
 }
 
+uint16_t get_flow_tap_term(uint16_t keycode, keyrecord_t *record,
+                           uint16_t prev_keycode) {
+    switch (keycode) {
+        case F_SFT:
+        case J_SFT:
+            return 0;
+    }
+    if (is_flow_tap_key(keycode) && is_flow_tap_key(prev_keycode)) {
+        return FLOW_TAP_TERM;
+    }
+    return 0;
+}
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
